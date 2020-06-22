@@ -14,7 +14,6 @@
     font-size: 200%;
     padding: 0px 30px;
     margin: 20px;
-
 }
 input{
     font-size: 60%;
@@ -28,7 +27,7 @@ input[type=submit]{
    width: 40vw;
 }
 #warnings{
-    width: 80vw;
+    width: 50vw;
     font-size: 150%;
     display: none;
     margin-left: 30px;
@@ -41,7 +40,6 @@ input[type=submit]{
     content:"\2714"; 
     position: relative;
     left: -20px;
-     
 }
 .invalid{
     color: red;
@@ -54,10 +52,9 @@ input[type=submit]{
 @media screen and (max-width:450px){
     .formContainer{
         width: 70vw;
-        display: flex;
-        flex-direction: column;
         font-size: 150%;
-        padding: 0px 30px;
-        margin: 10px;
-        border: 3px dotter red;
-}}
+    }
+    #warnings{
+        font-size: 80%;
+    }
+}
