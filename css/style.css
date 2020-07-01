@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
 .passwordValidation {
     box-sizing: border-box;
     margin: 0px;
@@ -26,6 +30,7 @@ input[type=submit]{
    background-color: seagreen;
    width: 40vw;
 }
+
 #warnings{
     width: 50vw;
     font-size: 150%;

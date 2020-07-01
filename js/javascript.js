@@ -8,7 +8,7 @@ $("#password").blur(function(){
 /*Testing the password everytime we change it*/
 $("#password").keyup(function(){
     var myPassword= $("#password").val();
-    /*testing for small letters*/
+    //testing for small letters
     if(/[a-z]/g.test(myPassword)){
         $("#letter").removeClass("invalid");
         $("#letter").addClass("valid");
@@ -17,7 +17,7 @@ $("#password").keyup(function(){
          $("#letter").removeClass("valid");
          $("#letter").addClass("invalid");
     }
-    /*testing for capital letters*/
+    //testing for capital letters
     if(/[A-Z]/g.test(myPassword)){
         $("#capital").removeClass("invalid");
         $("#capital").addClass("valid");
@@ -26,7 +26,7 @@ $("#password").keyup(function(){
         $("#capital").removeClass("valid");
         $("#capital").addClass("invalid");
     }
-    /*testing for small numbers*/
+    //testing for small numbers
     if(/[0-9]/g.test(myPassword)){
         $("#number").removeClass("invalid");
         $("#number").addClass("valid");
@@ -35,7 +35,7 @@ $("#password").keyup(function(){
         $("#number").removeClass("valid");
         $("#number").addClass("invalid");
     }
-    /*testing for the length*/
+    //testing for the length
     if(myPassword.length>=8){
         $("#length").removeClass("invalid");
         $("#length").addClass("valid");
@@ -44,5 +44,21 @@ $("#password").keyup(function(){
         $("#length").removeClass("valid");
         $("#length").addClass("invalid");
     }
+    //testing for special characters
+    if(/[!@$%^&*#]/.test(myPassword)){
+        $("#special").removeClass("invalid");
+        $("#special").addClass("valid");
+    }
+    else{
+        $("#special").removeClass("valid");
+        $("#special").addClass("invalid");
+    }
+})
+//showing the password
+$(".fa-eye").mouseenter(function(){
+    $("#password").attr("type", "text");
+})
+$(".fa-eye").mouseleave(function(){
+    $("#password").attr("type", "password");
 })
 
